@@ -3,8 +3,10 @@ let Person = require('./person')
 module.exports = function Student(klass)
 {
 	person(name1,age1);
+	var name2=this.name;
+	var age2 = this.age;
 	this.klass=klass;
 	this.Introduce = function() {
-		alert("I am a student. I am at class" + this.klass+".");
+		return "My name is" + name2+". I am"+age2+"years old."+"I am a student. I am at class" + this.klass+".";
 	}
 }
